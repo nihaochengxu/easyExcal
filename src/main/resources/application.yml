@@ -1,0 +1,26 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      one:
+          url: jdbc:mysql://localhost:3306/xiaobaidb?serverTimezone=GMT%2B8&characterEncoding=utf-8
+          username: root
+          password: root
+      two:
+          url: jdbc:mysql://localhost:3306/xiaobaidb?serverTimezone=GMT%2B8&characterEncoding=utf-8
+          username: root
+          password: root
+    url: jdbc:mysql://localhost:3306/xiaobaidb?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: root
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#mybatis:
+#  configuration:
+#    log-impl:
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

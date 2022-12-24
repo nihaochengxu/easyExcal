@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.it.easyexcal.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.it.easyexcal.entity.User">
+        <id column="id" property="id" />
+        <result column="data_uuid" property="dataUuid" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="deleted_flag" property="deletedFlag" />
+        <result column="client_id" property="clientId" />
+        <result column="client_password" property="clientPassword" />
+        <result column="nickname" property="nickname" />
+        <result column="head_url" property="headUrl" />
+        <result column="sex" property="sex" />
+        <result column="mobile" property="mobile" />
+        <result column="birthday" property="birthday" />
+        <result column="description" property="description" />
+        <result column="last_login" property="lastLogin" />
+        <result column="last_ip" property="lastIp" />
+        <result column="last_device" property="lastDevice" />
+        <result column="category" property="category" />
+        <result column="source_type" property="sourceType" />
+        <result column="invitation_code" property="invitationCode" />
+        <result column="state" property="state" />
+        <result column="im_import_flag" property="imImportFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        data_uuid,
+        remark,
+        create_time,
+        update_time,
+        deleted_flag,
+        id, client_id, client_password, nickname, head_url, sex, mobile, birthday, description, last_login, last_ip, last_device, category, source_type, invitation_code, state, im_import_flag
+
+    </sql>
+    <select id="queryUserByid"  parameterType="java.lang.Integer"  resultType="com.it.easyexcal.entity.User">
+
+    select * from t_user where id = #{uuid}
+    </select>
+
+</mapper>
