@@ -14,6 +14,7 @@ import java.io.IOException;
 @WebFilter("/")
 //@Component  如果加上WebFilter的同时又加上了该注解就是被加入容器两次，也就是意味着被执行两次filter
 //正确做法，@WebFilter+启动类上加上@ServletComponentScan
+//release-1.0.0开发
 public class OneFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
